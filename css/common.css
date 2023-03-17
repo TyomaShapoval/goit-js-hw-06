@@ -22,3 +22,23 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+.gallery {
+  display: flex;
+}
+.list {
+  list-style: none;
+}
+.list:not(:last-child) {
+  margin-right: 20px;
+}
+.nice {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  scale: 1;
+  transition: scale 250ms;
+}
+.nice:hover {
+  scale: 1.1;
+}

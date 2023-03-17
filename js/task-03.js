@@ -12,3 +12,23 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+// Використовуй масив об'єктів images для створення елементів <img>, вкладених в <li>. Для створення розмітки використовуй шаблонні рядки і метод insertAdjacentHTML().
+
+// Усі елементи галереї повинні додаватися в DOM за одну операцію додавання.
+// Додай мінімальне оформлення галереї флексбоксами або грідами через CSS класи.
+
+const elem = document.querySelector('.gallery')
+
+
+
+images.forEach(({url, alt}) => {
+  const tag = document.createElement("li");
+  tag.insertAdjacentHTML("beforeend", `<img class=nice src=${url} alt=${alt}>`)
+  tag.classList.add("list");
+  elem.append(tag)
+
+  
+
+})
