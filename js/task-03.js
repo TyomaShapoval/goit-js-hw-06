@@ -23,12 +23,8 @@ const elem = document.querySelector('.gallery')
 
 
 
-images.forEach(({url, alt}) => {
-  const tag = document.createElement("li");
-  tag.insertAdjacentHTML("beforeend", `<img class=nice src=${url} alt=${alt}>`)
-  tag.classList.add("list");
-  elem.append(tag)
 
-  
-
-})
+const imagesListEl = images.map(({ url, alt }) => 
+  `<li class=list><img class=nice src = ${url} alt = ${alt} width ='320'/></li>`
+).join(' ');
+elem.insertAdjacentHTML("afterbegin", imagesListEl);

@@ -41,6 +41,8 @@ newDiv.style.height = newDiv.style.width
 
 destroyEl.addEventListener("click", () =>{
   boxes.innerHTML = ""
+  inp.value = ""
 })
+
 // Number.parseInt(boxes.lastChild.style.width)
 // `${30+10*i}px`

@@ -16,10 +16,11 @@ const ingredients = [
 
 const elem = document.querySelector('#ingredients')
 
-ingredients.forEach(el => {
+const bang = ingredients.map(el => {
   const tag = document.createElement("li");
   tag.textContent = el;
-  elem.append(tag)
   tag.classList.add("item");
-
+  return tag
 })
+
+elem.append(...bang)
